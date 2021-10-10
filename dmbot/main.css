@@ -1,0 +1,226 @@
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background:var(--dim-gray);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Antic Slab', serif;
+}
+html{
+    scroll-behavior:smooth; 
+}
+body {  
+    background-color: rgba(44,44,49,1);
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+#loader{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    background: #0f0f0f;
+    margin: auto;
+    text-shadow: 0 0 1px white;
+    background: #0f0f0f;
+    z-index: 1100;
+}
+.lds-circle {
+  display: inline-block;
+  transform: translateZ(1px);
+  color: #094e16;
+}
+.lds-circle > div {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 8px;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-circle > div img {
+    max-width: 100%;
+    border-radius: 50%;
+    user-select: none;
+    pointer-events: none;
+}
+@keyframes lds-circle {
+  0%, 100% {
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(1800deg);
+    animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+  }
+  100% {
+    transform: rotateY(3600deg);
+  }
+}
+/* menu section */
+nav{
+    width: 100%;
+    height: 75px;
+    margin: 0 auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0f0f0f;
+    box-shadow: 2px 2px 15px #094e16;
+    border-bottom: 2px solid #094e16;
+}
+ul{
+    list-style: none;
+    margin: 10px auto;
+    position: relative;
+    margin-right: 10px;
+}
+li{
+    text-align: center;
+    color:white;
+    display: inline-block;
+    font-size: 25px;
+    padding: 15px;
+    font-weight: 100;
+    text-shadow: 1px 1px 5px #094e16;
+    transition: all .2s linear;
+    font-family:sans-serif;
+    border-radius: 10px;
+}
+li:hover{
+    background: black;
+    color: #094e16;
+}
+.logo{
+    width: 90%;
+    margin: 100px auto;
+    margin-bottom: 10px;
+}
+.logo-text{
+    margin: 20px auto;
+    color: white;
+    text-shadow: 1px 1px 5px darkblue,1px 1px 1px red,2px 2px 2px darkblue,3px 3px 3px red,4px 4px 4px darkblue,5px 5px 5px red;
+    letter-spacing: 5px;
+    font-weight: bold;
+    font-size: 50px;
+}
+.logo-img{
+    border-radius: 20px;
+    max-width: 100%;
+    box-shadow: 2px 2px 10px black;
+    margin: 20px auto;
+    transition: all 1s; 
+}
+.logo-img:hover{
+    transform: scale(1.1);
+}
+button{
+    background: rgba(0,0,0,.4);
+    backdrop-filter: blur(4px);
+    width: 300px;
+    max-width: 50%;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    border:none;
+    margin: 20px auto;
+    color: rgb(250, 250, 250);
+    border:2px solid #004283;
+    font-weight: bold;
+    transition: all .4s;
+    box-shadow: 2px 2px 15px #094e16;
+}
+button:hover{
+    background: white;
+    color: #094e16;
+    box-shadow: 0 0 1px red,0 0 2px red,0 0 5px red;
+}
+button:focus{
+    outline: none;
+}
+.info{
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+.info div{
+    width: 40%;
+    margin: 5px auto;
+    margin-left: 10px;
+    display: inline-block;
+    padding: 20px;
+    color: white;
+    font-size: 30px;
+    background: rgba(0,0,0,.5);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    box-shadow: 1px 3px 2px #094e16,4px 4px 20px #0f0f0f;
+}
+.info div label{
+    border-bottom: 2px solid #094e16;
+    padding: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.info div h2{
+    text-shadow: 1px 1px 5px darkblue,1px 1px 1px red,2px 2px 2px darkblue,3px 3px 3px red,4px 4px 4px darkblue,5px 5px 5px red;
+}
+.first{
+    margin-top: 100px;
+}
+.command{
+    margin: 50px auto;
+    margin-bottom: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    width: 80%;
+    background-color: rgba(0,0,0,.4);
+    padding: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 20px;
+    border-top: 10px double #094e16;
+    border-bottom: 10px double #094e16;
+    border-left: 3px solid #094e16;
+    border-right: 3px solid #094e16;
+}
+.command label{
+    color: white;
+    font-weight: bold;
+    border-bottom: 2px solid #094e16;
+    margin: 15px auto;
+}
+
+
+@media only screen and (max-width: 650px) {
+    li{
+        font-size: 20px;
+    }
+    .logo-img{
+        width:300px;
+        height: auto;
+    }
+    button{
+        max-width: 100%;
+    }
+    .info div{
+        width: 80%;
+    }
+}
